@@ -1,21 +1,20 @@
 package garage.Vehiculos;
 
-public class Moto {
-    public int marcaMoto;
+public class Moto extends Vehiculo {
     public int cilindrada;
     public int cantRuedasMoto;
 
     Moto(){
     }
-    Moto(int marcaMoto){
-        this.setMarcaMoto(marcaMoto);
+    Moto(int marca){
+        this.setMarca(marca);
     }
     Moto(int marcaMoto, int cilindrada){
-        this.setMarcaMoto(marcaMoto);
+        this.setMarca(marca);
         this.setCilindrada(cilindrada);
     }
     Moto(int marcaMoto, int cilindrada, int cantRuedasMoto){
-        this.setMarcaMoto(marcaMoto);
+        this.setMarca(marca);
         this.setCilindrada(cilindrada);
         this.setCantRuedasMoto(cantRuedasMoto);
     }
@@ -26,12 +25,6 @@ public class Moto {
     }
     public void setCantRuedasMoto(int cantRuedasMoto) {
         this.cantRuedasMoto = cantRuedasMoto;
-    }
-    public int getMarcaMoto() {
-        return marcaMoto;
-    }
-    public void setMarcaMoto(int marcaMoto) {
-        this.marcaMoto = marcaMoto;
     }
     public int getCilindrada() {
         return cilindrada;

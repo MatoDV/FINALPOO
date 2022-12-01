@@ -5,7 +5,10 @@ public class garage {
     public int capacidadMax;
     public int capacidadActual;
 
-
+    garage(int capacidadMax, int capacidadActual){
+        this.setCapacidadMax(10);
+        this.setCapacidadActual(5);
+    }
 
 
     public double getPrecioRuedas() {
