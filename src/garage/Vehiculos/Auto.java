@@ -5,7 +5,20 @@ public class Auto {
     public int cantPuerta;
     public int cantRuedasAuto;
 
-
+    Auto(){
+    }
+    Auto(int marcaAuto){
+        this.setMarcaAuto(marcaAuto);
+    }
+    Auto(int marcaAuto,int cantPuerta){
+        this.setMarcaAuto(marcaAuto);
+        this.setCantPuerta(cantPuerta);
+    }
+    Auto(int marcaAuto, int cantPuerta, int cantRuedasAuto){
+        this.setMarcaAuto(marcaAuto);
+        this.setCantPuerta(cantPuerta);
+        this.setCantRuedasAuto(cantRuedasAuto);
+    }
 
     public int getCantRuedasAuto() {
         return cantRuedasAuto;

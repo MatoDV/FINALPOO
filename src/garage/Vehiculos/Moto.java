@@ -5,7 +5,20 @@ public class Moto {
     public int cilindrada;
     public int cantRuedasMoto;
 
-
+    Moto(){
+    }
+    Moto(int marcaMoto){
+        this.setMarcaMoto(marcaMoto);
+    }
+    Moto(int marcaMoto, int cilindrada){
+        this.setMarcaMoto(marcaMoto);
+        this.setCilindrada(cilindrada);
+    }
+    Moto(int marcaMoto, int cilindrada, int cantRuedasMoto){
+        this.setMarcaMoto(marcaMoto);
+        this.setCilindrada(cilindrada);
+        this.setCantRuedasMoto(cantRuedasMoto);
+    }
 
 
     public int getCantRuedasMoto() {
