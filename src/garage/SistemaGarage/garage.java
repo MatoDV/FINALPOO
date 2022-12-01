@@ -1,4 +1,4 @@
-package garage.SistemaGarage;
+package garage.sistemaGarage;
 
 public class garage {
     public double precioRuedas;
