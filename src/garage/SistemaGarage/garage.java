@@ -1,14 +1,20 @@
-package garage.sistemaGarage;
+package garage.SistemaGarage;
 
-public class garage {
+public class Garage {
     public double precioRuedas;
     public int capacidadMax;
     public int capacidadActual;
 
-    garage(int capacidadMax, int capacidadActual){
+    Garage(double precioRuedas){
+        this.setPrecioRuedas(200);
+    }
+    Garage(int capacidadMax, int capacidadActual){
         this.setCapacidadMax(10);
         this.setCapacidadActual(5);
     }
+
+
+
 
 
     public double getPrecioRuedas() {
