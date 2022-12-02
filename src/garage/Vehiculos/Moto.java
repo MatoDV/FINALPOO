@@ -6,14 +6,14 @@ public class Moto extends Vehiculo {
 
     Moto(){
     }
-    Moto(int marca){
+    Moto(String marca){
         this.setMarca(marca);
     }
-    Moto(int marcaMoto, int cilindrada){
+    Moto(String marca,int cilindrada){
         this.setMarca(marca);
         this.setCilindrada(cilindrada);
     }
-    Moto(int marcaMoto, int cilindrada, int cantRuedasMoto){
+    public Moto(String marcaMoto, int cilindrada, int cantRuedasMoto){
         this.setMarca(marca);
         this.setCilindrada(cilindrada);
         this.setCantRuedasMoto(cantRuedasMoto);

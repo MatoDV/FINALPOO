@@ -1,21 +1,20 @@
 package garage.Vehiculos;
 
-public class Auto {
-    public String marcaAuto;
+public class Auto extends Vehiculo{
     public int cantPuerta;
     public int cantRuedasAuto;
 
     Auto(){
     }
-    Auto(String marcaAuto){
-        this.setMarcaAuto(marcaAuto);
+    Auto(String marca){
+        this.setMarca(marca);
     }
-    Auto(String marcaAuto,int cantPuerta){
-        this.setMarcaAuto(marcaAuto);
+    Auto(String marca,int cantPuerta){
+        this.setMarca(marca);
         this.setCantPuerta(cantPuerta);
     }
-    public Auto(String marcaAuto, int cantPuerta, int cantRuedasAuto){
-        this.setMarcaAuto(marcaAuto);
+    public Auto(String marca,int cantPuerta, int cantRuedasAuto){
+        this.setMarca(marca);
         this.setCantPuerta(cantPuerta);
         this.setCantRuedasAuto(cantRuedasAuto);
     }
@@ -25,12 +24,6 @@ public class Auto {
     }
     public void setCantRuedasAuto(int cantRuedasAuto) {
         this.cantRuedasAuto = cantRuedasAuto;
-    }
-    public String getMarcaAuto() {
-        return marcaAuto;
-    }
-    public void setMarcaAuto(String marcaAuto) {
-        this.marcaAuto = marcaAuto;
     }
     public int getCantPuerta() {
         return cantPuerta;
