@@ -1,7 +1,6 @@
 package mundial;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Equipo extends Partido{
     private String nombre;
@@ -9,9 +8,15 @@ public class Equipo extends Partido{
     private int puntos;
     public int sumarpuntos;
 
-    Equipo(Date fecha, Equipo local, Equipo visitante) {
-        super(fecha, local, visitante);
+    Equipo(String nombre) {
+        this.setNombre(nombre);
     }
+    public void sumarpuntos(){
+        this.setPuntos(3);
+        sumarpuntos=puntos+sumarpuntos;
+        this.setPuntos(sumarpuntos);
+    }
+
     public String getNombre() {
         return nombre;
     }
