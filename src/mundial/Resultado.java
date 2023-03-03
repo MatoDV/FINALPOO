@@ -6,8 +6,11 @@ public class Resultado extends Partido{
     private int golesLocal;
     private int golesVisitante;
 
-    Resultado(Date fecha, Equipo local, Equipo visitante) {
-        super(fecha, local, visitante);
+    public boolean ganoLocal(){
+        return golesLocal>golesVisitante;
+    }
+    public boolean empatan(){
+        return golesLocal==golesVisitante;
     }
 
     public int getGolesLocal() {
@@ -25,10 +28,5 @@ public class Resultado extends Partido{
     public void setGolesVisitante(int golesVisitante) {
         this.golesVisitante = golesVisitante;
     }
-    public boolean ganoLocal(){
-        return false;
-    }
-    public boolean empate(){
-        return false;
-    }
+
 }
