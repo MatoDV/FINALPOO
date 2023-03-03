@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Grupo extends EtapaMundial{
+    Grupo(){
+        this.setDescripcionEtapa("Fase de Grupos");
+    }
     public void generarPartidos(ArrayList<Equipo>equipos){
         for (int i=0;i<equipos.size();i++){
             for (int k=i+1;k<equipos.size();k++){
@@ -24,5 +27,9 @@ public class Grupo extends EtapaMundial{
             }
         }
         return equiposQueAvanzan;
+    }
+    @Override
+    public void marcador(ArrayList<Partido>partidos){
+        super.marcador(partidos);
     }
 }
