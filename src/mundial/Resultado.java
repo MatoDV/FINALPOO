@@ -2,7 +2,7 @@ package mundial;
 
 import java.util.Date;
 
-public class Resultado extends Partido{
+public class Resultado{
     private int golesLocal;
     private int golesVisitante;
 
