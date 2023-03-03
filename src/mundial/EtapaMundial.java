@@ -32,7 +32,7 @@ public class EtapaMundial {
 
     protected void marcador(ArrayList<Partido> partidos) {
         for (int i=0;i<partidos.size();i++){
-            getPartidos().get(i).gol(4,2);
+            getPartidos().get(i).gol((int)(Math.random()*3),(int)(Math.random()*2));
         }
     }
 }
