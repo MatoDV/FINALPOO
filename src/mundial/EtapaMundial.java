@@ -29,4 +29,10 @@ public class EtapaMundial {
     public void setDescripcionEtapa(String descripcionEtapa) {
         this.descripcionEtapa = descripcionEtapa;
     }
+
+    protected void marcador(ArrayList<Partido> partidos) {
+        for (int i=0;i<partidos.size();i++){
+            getPartidos().get(i).gol(4,2);
+        }
+    }
 }
