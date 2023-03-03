@@ -55,4 +55,9 @@ public class Partido extends EtapaMundial{
     public void setLocal(Equipo local) {
         this.local = local;
     }
+
+    public void gol(int golesLocal, int golesVisitante) {
+        getResultado().setGolesLocal(golesLocal);
+        getResultado().setGolesVisitante(golesVisitante);
+    }
 }
