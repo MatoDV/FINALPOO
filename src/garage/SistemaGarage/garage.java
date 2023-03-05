@@ -1,22 +1,51 @@
 package garage.SistemaGarage;
 
+import garage.Vehiculos.Vehiculo;
+
+import java.util.ArrayList;
+
 public class Garage {
     public double precioRuedas;
     public int capacidadMax;
-    public int capacidadActual;
+    public ArrayList<Vehiculo> vehiculos;
 
-    Garage(double precioRuedas){
-        this.setPrecioRuedas(200);
+    Garage(int capacidadMax,double precioRuedas){
+        this.setCapacidadMax(capacidadMax);
+        this.setPrecioRuedas(precioRuedas);
+        this.vehiculos=new ArrayList<>();
     }
-    Garage(int capacidadMax, int capacidadActual){
-        this.setCapacidadMax(10);
-        this.setCapacidadActual(5);
+    public void añadirVehiculo(Vehiculo vehiculo) {
+        if (vehiculos.size() >= capacidadMax) {
+            System.out.println("No hay mas espacio en el garage");
+            return;
+        } else {
+            vehiculos.add(vehiculo);
+        }
     }
-
-
-
-
-
+    public void sacarVehiculo(Vehiculo vehiculo){
+        vehiculos.remove(vehiculo);
+    }
+    public int getTotalVehiculos(){
+        return vehiculos.size();
+    }
+    public double getTotalPrecioRuedas(){
+        int totalRuedas = 0;
+        for (Vehiculo vehiculo:vehiculos){
+            if(vehiculo.getCantRuedas() == 2){
+                totalRuedas += 2;
+            } else if(vehiculo.getCantRuedas() == 4){
+                totalRuedas += 4;
+            }
+        }
+        return precioRuedas*totalRuedas;
+    }
+    public double getKilometrajeTotal(){
+        double sum=0;
+        for (Vehiculo vehiculo:vehiculos){
+            sum+=vehiculo.getKilometraje();
+        }
+        return sum/vehiculos.size();
+    }
     public double getPrecioRuedas() {
         return precioRuedas;
     }
@@ -33,12 +62,5 @@ public class Garage {
         this.capacidadMax = capacidadMax;
     }
 
-    public int getCapacidadActual() {
-        return capacidadActual;
-    }
-
-    public void setCapacidadActual(int capacidadActual) {
-        this.capacidadActual = capacidadActual;
-    }
 
 }
