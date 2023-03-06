@@ -9,7 +9,7 @@ public class Garage {
     public int capacidadMax;
     public ArrayList<Vehiculo> vehiculos;
 
-    Garage(int capacidadMax,double precioRuedas){
+    public Garage(int capacidadMax, double precioRuedas){
         this.setCapacidadMax(capacidadMax);
         this.setPrecioRuedas(precioRuedas);
         this.vehiculos=new ArrayList<>();

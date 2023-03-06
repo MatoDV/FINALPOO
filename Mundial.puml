@@ -1,0 +1,69 @@
+@startuml
+class mundial.Main {
++ {static} void main(String[])
+}
+class mundial.Llave {
++ void generarPartido(ArrayList<Equipo>)
++ ArrayList<Equipo> getEquiposQueAvanzan()
+}
+class mundial.Partido {
+- Date fecha
+- Equipo local
+- Equipo visitante
+- Resultado resultado
++ Equipo getLocal()
++ Equipo getVisitante()
++ Resultado getResultado()
++ Date getFecha()
++ void setFecha(Date)
++ void setVisitante(Equipo)
++ void setResultado(Resultado)
++ void setLocal(Equipo)
++ void gol(int,int)
+}
+class mundial.Grupo {
++ void generarPartidos(ArrayList<Equipo>)
++ ArrayList<Equipo> getEquiposQueAvanzan()
++ void marcador(ArrayList<Partido>)
+}
+class mundial.Resultado {
+- int golesLocal
+- int golesVisitante
++ boolean ganoLocal()
++ boolean empatan()
++ int getGolesLocal()
++ void setGolesLocal(int)
++ int getGolesVisitante()
++ void setGolesVisitante(int)
+}
+class mundial.EtapaMundial {
+- String descripcionEtapa
+- ArrayList<Partido> partidos
++ ArrayList<Equipo> equiposQueAvanzan
++ ArrayList<Partido> addPartido(Partido)
++ ArrayList<Partido> getPartidos()
++ ArrayList<Equipo> getEquiposQueAvanzan()
++ String getDescripcionEtapa()
++ void setDescripcionEtapa(String)
+# void marcador(ArrayList<Partido>)
+}
+class mundial.Equipo {
+- String nombre
+- ArrayList<Partido> partidosJugados
+- int puntos
++ int sumarpuntos
++ void sumarpuntos()
++ String getNombre()
++ void setNombre(String)
++ int getPuntos()
++ void setPuntos(int)
++ int getSumarpuntos()
++ void setSumarpuntos(int)
+}
+
+
+mundial.EtapaMundial <|-- mundial.Llave
+mundial.EtapaMundial <|-- mundial.Partido
+mundial.EtapaMundial <|-- mundial.Grupo
+mundial.Partido <|-- mundial.Equipo
+@enduml

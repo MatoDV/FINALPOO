@@ -1,0 +1,44 @@
+@startuml
+class garage.SistemaGarage.Garage {
++ double precioRuedas
++ int capacidadMax
++ ArrayList<Vehiculo> vehiculos
++ void añadirVehiculo(Vehiculo)
++ void sacarVehiculo(Vehiculo)
++ int getTotalVehiculos()
++ double getTotalPrecioRuedas()
++ double getKilometrajeTotal()
++ double getPrecioRuedas()
++ void setPrecioRuedas(double)
++ int getCapacidadMax()
++ void setCapacidadMax(int)
+}
+class garage.Vehiculos.Vehiculo {
++ String marca
++ int cantRuedas
++ int kilometraje
++ int getCantRuedas()
++ void setCantRuedas(int)
++ String getMarca()
++ void setMarca(String)
++ int getKilometraje()
++ void setKilometraje(int)
+}
+class garage.Vehiculos.Moto {
++ int cilindrada
++ int getCilindrada()
++ void setCilindrada(int)
+}
+class garage.SistemaGarage.GarageTest {
++ {static} void main(String[])
+}
+class garage.Vehiculos.Auto {
++ int cantPuerta
++ int getCantPuerta()
++ void setCantPuerta(int)
+}
+
+
+garage.Vehiculos.Vehiculo <|-- garage.Vehiculos.Moto
+garage.Vehiculos.Vehiculo <|-- garage.Vehiculos.Auto
+@enduml

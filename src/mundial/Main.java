@@ -1,5 +1,10 @@
 package mundial;
 
+import garage.SistemaGarage.Garage;
+import garage.Vehiculos.Auto;
+import garage.Vehiculos.Moto;
+import garage.Vehiculos.Vehiculo;
+
 import java.util.ArrayList;
 
 public class Main {
@@ -171,6 +176,9 @@ public class Main {
         finalMundial.getPartidos().get(0).gol(5, 4);
         ArrayList<Equipo> ganador = finalMundial.getEquiposQueAvanzan();
 
+        System.out.println("-------------------------------------------------------------");
+        System.out.println("----------------------------MUNDIAL----------------------------");
+
         System.out.println("-Equipos que avanzan a los cuartos de final:");
         for (Equipo equipo : pasanCuartos) {
             System.out.println(equipo.getNombre());
@@ -186,5 +194,24 @@ public class Main {
             System.out.println(equipo.getNombre());
         }
         System.out.println(String.format("-El ganador del mundial es: %S", ganador.get(0).getNombre()));
+
+        System.out.println("-------------------------------------------------------------");
+        System.out.println("----------------------------GARAGE----------------------------");
+
+        Garage garage = new Garage(10, 400);
+        Auto vw = new Auto("vw", 4, 8000);
+        Moto bmw = new Moto("bmw", 4, 2500);
+
+        garage.añadirVehiculo(vw);
+        garage.añadirVehiculo(bmw);
+
+        System.out.println("Total de vehiculos: " + garage.getTotalVehiculos());
+        System.out.println("Precio total de ruedas: " + garage.getTotalPrecioRuedas());
+        System.out.println("Kilometraje promedio: " + garage.getKilometrajeTotal());
+
+
+        for (Vehiculo vehiculo : garage.vehiculos) {
+            System.out.println("Marca: " + vehiculo.getMarca() + ", Kilometraje: " + vehiculo.getKilometraje());
+        }
     }
 }
